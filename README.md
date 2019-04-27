@@ -1,3 +1,12 @@
+1.
+
+In order to load our file, we first made a docker neo4j docker container.
+Then we ran it with username: neo4j and password: 123.
+Then we downloaded the file, extracted it and copied it to the container with this command:
+docker cp csvfile.csv neo4j:/var/lib/neo4j/import.
+
+Then we could in the end load our csv file into neo4
+
 
 ```
 USING PERIODIC COMMIT
@@ -11,3 +20,4 @@ LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row
     })
 return row
 ```
+match(tweet:Tweet{}) set tweet.mentions = [];
