@@ -28,6 +28,10 @@ return row
 ```
 <img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.0.png"/>
 
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.1.png"/>
+
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.3.png"/>
+
 ```
 match(n:Tweet) set n.tweetContent = replace(n.tweetContent, "@ ", "@" ) return n;
 ```
@@ -41,10 +45,13 @@ MATCH (n:Tweet) return extract( m in
 
 <h1>Exercise 2</h1>
 
+
+
 ```
 LOAD CSV FROM 'file:///Tweets.csv' AS line
 CREATE (:Tweets { mentions: line[0], postedBy: line[1]})
 ```
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/2.0.png"/>
 
 ```
 MATCH (a:Tweet),(b:Tweets)
@@ -52,6 +59,8 @@ WHERE a.userName = "Bridgette Parlma" AND b.postedBy = "Bridgette Parlma"
 CREATE (a)-[r:Tweeters]->(b)
 RETURN r
 ```
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/2.1.png"/>
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/2.2.png"/>
 
 <h1>Exercise 3</h1>
 
@@ -63,3 +72,4 @@ WITH round(distance(aPoint, cph)) / 1000 as distance, a
 ORDER BY distance DESC
 RETURN DISTINCT distance
 ```
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/3.0.png"/>
