@@ -1,4 +1,4 @@
-<h1>Assignment 12 in Database</h1>
+<h1>Database Assignment 12</h1>
 
 <a href="https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md">Assignment 12</a>
 <h1>Exercise 1</h1>
