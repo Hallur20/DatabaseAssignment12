@@ -15,7 +15,7 @@ Then we downloaded the file, extracted it and copied it to the container with th
 docker cp csvfile.csv neo4j:/var/lib/neo4j/import.
 ```
 
-Then we could in the end load our csv file into neo4</p>
+Then we could in the end load our csv file into neo4 with node name Tweet. Query:</p>
 
 ```
 USING PERIODIC COMMIT
@@ -33,11 +33,13 @@ return row
 
 <img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.1.png"/>
 
-
+<p>Next we wanted to fix the problem that sometimes a space would be before the mentioned user. Query: </p>
 
 ```
 match(n:Tweet) set n.tweetContent = replace(n.tweetContent, "@ ", "@" ) return n;
 ```
+
+<p>After the fix we got the result we wanted. Query:</p>
 
 ```
 MATCH (n:Tweet) return extract( m in 
@@ -55,11 +57,14 @@ then we copied it to the docker container with this command:
 docker cp Tweets.csv neo4j:/var/lib/neo4j/import
 ```
 
+<p>then we loaded the csv file into neo4j. Query:</p>
+
 ```
 LOAD CSV FROM 'file:///Tweets.csv' AS line
 CREATE (:Tweets { mentions: line[0], postedBy: line[1]})
 ```
 
+<p>we decided on making a relation between userName Bridgette Parlma and postedBy Bridgette Parlma.</p>
 
 ```
 MATCH (a:Tweet),(b:Tweets)
