@@ -46,6 +46,7 @@ MATCH (n:Tweet) return extract( m in
 <h1>Exercise 2</h1>
 we took the result from the previous image, and exported it as csv file by clicking on this button:
 <img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/2.0.png"/>
+then we copied it to the docker container with this command: docker cp Tweets.csv neo4j:/var/lib/neo4j/import
 
 ```
 LOAD CSV FROM 'file:///Tweets.csv' AS line
