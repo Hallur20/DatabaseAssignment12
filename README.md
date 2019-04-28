@@ -1,6 +1,4 @@
-<h1>Database Assignment 12</h1>
-
-<a href="https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md">Assignment 12</a>
+<h1>Database Assignment 12 <span id="e_851" class="emoji" data-src="graphics/emojis/link.png"></span></h1>
 
 <h1>Setup <g-emoji class="g-emoji" alias="checkered_flag" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c1.png">🏁</g-emoji> </h1>
 
