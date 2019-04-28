@@ -1,6 +1,6 @@
 <h1>Assignment 12 in Database</h1>
 
-<h5>Exercise 1</h5>
+<h1>Exercise 1</h1>
 <p>In order to load our file, we first made a docker neo4j docker container.
 Then we ran it with username: neo4j and password: 123.
 Then we downloaded the file, extracted it and copied it to the container with this command:
@@ -31,7 +31,7 @@ MATCH (n:Tweet) return extract( m in
                 as mentions, n.userName as postedBy
 ```
 
-<h5>Exercise 2</h5>
+<h1>Exercise 2</h1>
 
 ```
 LOAD CSV FROM 'file:///Tweets.csv' AS line
@@ -45,7 +45,7 @@ CREATE (a)-[r:Tweeters]->(b)
 RETURN r
 ```
 
-<h5>Exercise 3</h5>
+<h1>Exercise 3</h1>
 
 ```
 MATCH (a:Tweet)
