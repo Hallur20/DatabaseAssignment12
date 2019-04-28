@@ -65,6 +65,8 @@ RETURN r
 
 <h1>Exercise 3</h1>
 
+<p>we were unsure of what the exercise was about, so what we ended up doing was just comparing the distance from each tweet, with the school location (nørgaardvej 30), the maximum distance ended up being 1509.863</p>
+
 ```
 MATCH (a:Tweet)
 WITH point({ longitude: toFloat(a.longitude), latitude: toFloat(a.latitude)}) AS aPoint,
