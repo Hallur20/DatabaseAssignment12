@@ -21,3 +21,5 @@ LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row
 return row
 ```
 match(tweet:Tweet{}) set tweet.mentions = [];
+
+match(n:Tweet) set n.tweetContent = replace(n.tweetContent, "@ ", "@" ) return n;
