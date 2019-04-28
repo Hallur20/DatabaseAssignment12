@@ -3,6 +3,10 @@
 <h1>Setup <g-emoji class="g-emoji" alias="checkered_flag" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c1.png">🏁</g-emoji> </h1>
 
 
+
+    
+<h1>Exercise 1</h1>
+
 <p>In order to load our file, we first made a docker neo4j docker container.
 Then we ran it with username: neo4j and password: 123.
 Then we downloaded the file, extracted it and copied it to the container with this command:
@@ -22,8 +26,7 @@ LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row
     })
 return row
 ```
-    
-<h1>Exercise 1</h1>
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.0.png"/>
 
 ```
 match(n:Tweet) set n.tweetContent = replace(n.tweetContent, "@ ", "@" ) return n;
