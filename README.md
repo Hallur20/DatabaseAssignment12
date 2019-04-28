@@ -40,7 +40,7 @@ RETURN r
 
 MATCH (a:Tweet)
 WITH point({ longitude: toFloat(a.longitude), latitude: toFloat(a.latitude)}) AS aPoint,
-    point({ longitude: 12.5700724, latitude: 55.6867243}) as cph, a
+    point({ longitude: 12.511735, latitude: 55.770179}) as cph, a
 WITH round(distance(aPoint, cph)) / 1000 as distance, a
 ORDER BY distance DESC
 RETURN DISTINCT distance
