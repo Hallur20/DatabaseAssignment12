@@ -10,7 +10,10 @@
 <p>In order to load our file, we first made a docker neo4j docker container.
 Then we ran it with username: neo4j and password: 123.
 Then we downloaded the file, extracted it and copied it to the container with this command:
+    
+```bash
 docker cp csvfile.csv neo4j:/var/lib/neo4j/import.
+```
 
 Then we could in the end load our csv file into neo4</p>
 
@@ -46,7 +49,11 @@ MATCH (n:Tweet) return extract( m in
 <h1>Exercise 2</h1>
 we took the result from the previous image, and exported it as csv file by clicking on this button:
 <img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/2.0.png"/>
-then we copied it to the docker container with this command: docker cp Tweets.csv neo4j:/var/lib/neo4j/import
+then we copied it to the docker container with this command:
+
+```bash
+docker cp Tweets.csv neo4j:/var/lib/neo4j/import
+```
 
 ```
 LOAD CSV FROM 'file:///Tweets.csv' AS line
