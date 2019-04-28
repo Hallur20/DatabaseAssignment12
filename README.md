@@ -30,7 +30,7 @@ return row
 
 <img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.1.png"/>
 
-<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.3.png"/>
+
 
 ```
 match(n:Tweet) set n.tweetContent = replace(n.tweetContent, "@ ", "@" ) return n;
@@ -42,7 +42,7 @@ MATCH (n:Tweet) return extract( m in
                 | right(m,size(m)-1))
                 as mentions, n.userName as postedBy
 ```
-
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.3.png"/>
 <h1>Exercise 2</h1>
 
 
