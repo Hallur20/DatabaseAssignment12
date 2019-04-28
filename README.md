@@ -37,3 +37,10 @@ MATCH (a:Tweet),(b:Tweets)
 WHERE a.userName = "Bridgette Parlma" AND b.postedBy = "Bridgette Parlma"
 CREATE (a)-[r:Tweeters]->(b)
 RETURN r
+
+MATCH (a:Tweet)
+WITH point({ longitude: toFloat(a.longitude), latitude: toFloat(a.latitude)}) AS aPoint,
+    point({ longitude: 12.5700724, latitude: 55.6867243}) as cph, a
+WITH round(distance(aPoint, cph)) / 1000 as distance, a
+ORDER BY distance DESC
+RETURN DISTINCT distance
