@@ -1,7 +1,9 @@
 <h1>Database Assignment 12</h1>
 
 <a href="https://github.com/datsoftlyngby/soft2019spring-databases/blob/master/assignments/assignment12.md">Assignment 12</a>
-<h1>Exercise 1</h1>
+
+<h1>Setup <g-emoji class="g-emoji" alias="checkered_flag" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3c1.png">🏁</g-emoji> </h1>
+
 
 <p>In order to load our file, we first made a docker neo4j docker container.
 Then we ran it with username: neo4j and password: 123.
@@ -22,6 +24,9 @@ LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row
     })
 return row
 ```
+    
+<h1>Exercise 1</h1>
+
 ```
 match(n:Tweet) set n.tweetContent = replace(n.tweetContent, "@ ", "@" ) return n;
 ```
