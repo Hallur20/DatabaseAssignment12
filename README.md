@@ -20,6 +20,13 @@ LOAD CSV WITH HEADERS FROM "file:///some2016UKgeotweets.csv" AS row
     })
 return row
 ```
-match(tweet:Tweet{}) set tweet.mentions = [];
 
 match(n:Tweet) set n.tweetContent = replace(n.tweetContent, "@ ", "@" ) return n;
+
+MATCH (n:Tweet) return extract( m in 
+                filter(m in split(n.tweetContent," ") where m starts with "@" and size(m) > 1) 
+                | right(m,size(m)-1))
+                as mentions, n.userName as postedBy
+
+LOAD CSV FROM 'file:///Tweets.csv' AS line
+CREATE (:Tweets { mentions: line[0], postedBy: line[1]})
