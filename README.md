@@ -44,14 +44,14 @@ MATCH (n:Tweet) return extract( m in
 ```
 <img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/1.3.png"/>
 <h1>Exercise 2</h1>
-
-
+we took the result from the previous image, and exported it as csv file by clicking on this button:
+<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/2.0.png"/>
 
 ```
 LOAD CSV FROM 'file:///Tweets.csv' AS line
 CREATE (:Tweets { mentions: line[0], postedBy: line[1]})
 ```
-<img src="https://github.com/Hallur20/DatabaseAssignment12/blob/master/2.0.png"/>
+
 
 ```
 MATCH (a:Tweet),(b:Tweets)
