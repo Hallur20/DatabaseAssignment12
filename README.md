@@ -32,3 +32,8 @@ LOAD CSV FROM 'file:///Tweets.csv' AS line
 CREATE (:Tweets { mentions: line[0], postedBy: line[1]})
 
 match(n:Tweets{postedBy:"postedBy"}) delete n
+
+MATCH (a:Tweet),(b:Tweets)
+WHERE a.userName = "Bridgette Parlma" AND b.postedBy = "Bridgette Parlma"
+CREATE (a)-[r:Tweeters]->(b)
+RETURN r
