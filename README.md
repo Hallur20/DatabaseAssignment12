@@ -15,7 +15,7 @@ Then we downloaded the file, extracted it and copied it to the container with th
 docker cp csvfile.csv neo4j:/var/lib/neo4j/import.
 ```
 
-Then we could in the end load our csv file into neo4 with node name Tweet. Query:</p>
+Then we could in the end load our csv file into neo4 with node name Tweet. </p>
 
 ```
 USING PERIODIC COMMIT
@@ -57,7 +57,7 @@ then we copied it to the docker container with this command:
 docker cp Tweets.csv neo4j:/var/lib/neo4j/import
 ```
 
-<p>then we loaded the csv file into neo4j. Query:</p>
+<p>then we loaded the csv file into neo4j.</p>
 
 ```
 LOAD CSV FROM 'file:///Tweets.csv' AS line
